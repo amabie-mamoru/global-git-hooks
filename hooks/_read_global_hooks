@@ -1,0 +1,22 @@
+#!/bin/sh
+
+DIR_NAME=$1
+
+GLOBAL_HOOK_ROOT=${HOME}/.config/git/hooks
+HOOKS_PATH=${GLOBAL_HOOK_ROOT}/${DIR_NAME}
+if [ -e $HOOKS_PATH ]; then
+  HOOKS=`find ${HOOKS_PATH}/ -type f`
+
+  if [ ${#HOOKS} -ne 0 ]; then
+    for hook in ${HOOKS[@]}
+    do
+      sh $hook
+      if [ $? != 0 ]; then
+        echo "############################"
+        echo "error at $hook"
+        echo "############################"
+        exit 1;
+      fi
+    done
+  fi
+fi

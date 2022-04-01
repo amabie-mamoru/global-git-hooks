@@ -1,0 +1,5 @@
+#!/bin/sh
+
+GLOBAL_HOOK_ROOT=${HOME}/.config/git/hooks
+sh ${GLOBAL_HOOK_ROOT}/_read_global_hooks pre-rebases
+sh ${GLOBAL_HOOK_ROOT}/_read_local_hooks
