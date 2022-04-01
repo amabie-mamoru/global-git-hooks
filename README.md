@@ -74,3 +74,9 @@ hoge # <- ここに出力される
 [fix/aaa cb5f4e6fdfc] commit message
 ```
 
+## おまけ
+
+`feature/sample` ブランチにてサンプルが確認できる
+
+[pre-commit hook サンプル](https://github.com/amabie-mamoru/global-git-hooks/blob/feature/sample/hooks/pre-commits/confirm-branch.sh)
+
