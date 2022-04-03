@@ -28,7 +28,7 @@ hooks/pre-commit に記載されている `_read_global_hooks` の引数に合�
 ※この引数名を変更することで任意のディレクトリにすることが可能
 
 ```sh
-!/bin/sh
+#!/bin/sh
 
 GLOBAL_HOOK_ROOT=${HOME}/.config/git/hooks
 sh ${GLOBAL_HOOK_ROOT}/_read_global_hooks pre-commits # <- この引数名のディレクトリを作る
